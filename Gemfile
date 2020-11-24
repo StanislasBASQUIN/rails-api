@@ -31,6 +31,15 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Call RSpec
+  gem 'rspec-rails'
+  # Create fixture to use in our tests
+  gem 'factory_bot_rails'
+  #Faker for the Seed
+  gem 'faker'
+  # Provides new neat matchers for JSON:API
+  gem 'jsonapi-rspec'
+
 end
 
 group :development do
@@ -51,8 +60,11 @@ gem 'devise'
 #Devise Json Web Token
 gem 'devise-jwt', '~> 0.7.0'
 
-#Faker for the Seed
-gem 'faker'
-
 #Lib Table Print
 gem 'table_print'
+
+#To access our API from a different URL
+gem 'rack-cors'
+
+#Getting Valid JSON:API
+gem 'jsonapi-rails'
